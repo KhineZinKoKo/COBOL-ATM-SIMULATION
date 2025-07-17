@@ -217,7 +217,6 @@
                        DISPLAY "Enter the amount to deposit..."
                        ACCEPT AMOUNTS
 
-                       IF AMOUNTS < 0
                        IF AMOUNTS < 5000
                            DISPLAY "Deposit amount should be greater "
                            "than 0..."
