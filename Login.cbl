@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
        PROGRAM-ID. LOGIN.
        PROCEDURE DIVISION.
-       DISPLAY "Login screen".
+              DISPLAY "Welcome to COBOL ATM Login".
        STOP RUN.
