@@ -1,0 +1,5 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. LOGIN.
+       PROCEDURE DIVISION.
+       DISPLAY "Login screen".
+       STOP RUN.
