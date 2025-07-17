@@ -42,6 +42,7 @@
        01 SESSION-BALANCE           PIC 9(15).
 
        01 AMOUNTS                   PIC 9(15)V99.
+       01 AMOUNTS                   PIC S9(15)V99.
        01 FORMAT-BALANCE            PIC $ZZZ,ZZZ,ZZZ,ZZZ,ZZZ.ZZ.
        01 RECEIVER-ID               PIC 9(16).
 
@@ -212,14 +213,17 @@
 
                    WHEN 2
                        PERFORM UNTIL AMOUNTS > 0
+                       PERFORM UNTIL AMOUNTS >= 5000
                        MOVE USER-BALANCE TO FORMAT-BALANCE
                        DISPLAY "Your Balance: " FORMAT-BALANCE
                        DISPLAY "Enter the amount to deposit..."
                        ACCEPT AMOUNTS
 
                        IF AMOUNTS < 0
+                       IF AMOUNTS < 5000
                            DISPLAY "Deposit amount should be greater "
                            "than 0..."
+                           "than 5000..."
                        END-IF
                        DISPLAY "======================================="
                        "====="
